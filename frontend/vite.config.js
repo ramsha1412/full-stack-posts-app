@@ -4,10 +4,4 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  server: {
-    proxy: {
-      '/posts': 'http://localhost:3000',
-      '/create-post': 'http://localhost:3000',
-    },
-  },
 })
