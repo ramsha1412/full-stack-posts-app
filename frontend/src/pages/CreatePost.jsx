@@ -10,8 +10,10 @@ function CreatePost() {
         e.preventDefault()
         
         const formData = new FormData(e.target)
+        
+        const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000'
 
-        axios.post("/create-post", formData)
+        axios.post(`BASE_URL}{/create-post`, formData)
         .then((res)=> {
 
             navigate("/feed")

@@ -7,7 +7,9 @@ function Feed() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get("/posts")
+        const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000'
+
+        axios.get(`{BASE_URL}/posts`)
         .then((res)=>{
             setPosts(res.data.posts)
         })
