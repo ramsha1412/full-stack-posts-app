@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 function Feed() {
     const [posts, setPosts] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
         axios.get("/posts")
@@ -13,6 +15,7 @@ function Feed() {
 
   return (
     <section className='feed-section'>
+        <button onClick={()=> navigate('/create-post')}>+ New Post</button>
 {
     posts.length > 0 ? (
         posts.map( (post) => (
