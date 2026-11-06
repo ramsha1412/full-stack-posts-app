@@ -1,8 +1,8 @@
 require("dotenv").config();
-// Adjusted paths to reach back into your original backend folder structure
 const app = require("../backend/src/app");
 const connectDB = require("../backend/src/db/db");
 
+// Initialize Database connection
 connectDB();
 
 if (process.env.NODE_ENV !== 'production') {
