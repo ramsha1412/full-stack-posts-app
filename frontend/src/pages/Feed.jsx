@@ -11,7 +11,7 @@ function Feed() {
     ])
 
     useEffect(() => {
-        axios.get("http://localhost:3000/posts")
+        axios.get("/posts")
         .then((res)=>{
             setPosts(res.data.posts)
         })

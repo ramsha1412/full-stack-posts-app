@@ -11,7 +11,7 @@ function CreatePost() {
         
         const formData = new FormData(e.target)
 
-        axios.post("http://localhost:3000/create-post", formData)
+        axios.post("/create-post", formData)
         .then((res)=> {
 
             navigate("/feed")
