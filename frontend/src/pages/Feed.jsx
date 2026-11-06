@@ -16,7 +16,7 @@ function Feed() {
 {
     posts.length > 0 ? (
         posts.map( (post) => (
-            <div key={post.id} className='post-card' >
+            <div key={post.id || post._id} className='post-card' >
                 <img src={post.image} alt={post.caption} />
                 <p>{post.caption}</p>
             </div>
